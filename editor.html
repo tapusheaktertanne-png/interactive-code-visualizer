@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeViz | Code Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeViz
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                <span>🏠</span>
+                Home
+            </a>
+
+            <a href="editor.html" class="active">
+                <span>💻</span>
+                Code Editor
+            </a>
+
+            <a href="#">
+                <span>▶</span>
+                Visualizer
+            </a>
+
+            <a href="#">
+                <span>🕘</span>
+                History
+            </a>
+
+            <a href="#">
+                <span>ℹ</span>
+                About
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <p class="small-title">
+                    CODE EDITOR
+                </p>
+
+                <h1>
+                    Write Your Code
+                </h1>
+
+                <p class="page-description">
+                    Select a programming language and enter your code
+                    to visualize its execution.
+                </p>
+            </div>
+
+
+            <!-- Language -->
+
+            <div class="language-selector">
+
+                <label for="language">
+                    Language
+                </label>
+
+                <select id="language">
+
+                    <option value="cpp">
+                        C++
+                    </option>
+
+                    <option value="c">
+                        C
+                    </option>
+
+                    <option value="java">
+                        Java
+                    </option>
+
+                    <option value="python">
+                        Python
+                    </option>
+
+                </select>
+
+            </div>
+
+        </header>
+
+
+        <!-- Editor Card -->
+
+        <section class="editor-card">
+
+            <!-- Editor Header -->
+
+            <div class="editor-header">
+
+                <div class="file-name">
+
+                    <span class="file-icon">
+                        &lt;/&gt;
+                    </span>
+
+                    <span id="fileName">
+                        main.cpp
+                    </span>
+
+                </div>
+
+                <span class="editor-status">
+                    ● Ready
+                </span>
+
+            </div>
+
+
+            <!-- Code Editor -->
+
+            <div class="editor-area">
+
+                <div class="line-numbers" id="lineNumbers">
+                    1
+                </div>
+
+                <textarea
+                    id="codeInput"
+                    spellcheck="false"
+                    placeholder="Write your code here..."
+                >#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+
+    int x = 10;
+    int y = 20;
+    int sum = x + y;
+
+    cout &lt;&lt; sum;
+
+    return 0;
+}</textarea>
+
+            </div>
+
+
+            <!-- Controls -->
+
+            <div class="editor-controls">
+
+                <button
+                    class="run-btn"
+                    id="runButton"
+                >
+                    ▶ Run Code
+                </button>
+
+                <button
+                    class="control-btn"
+                    id="previousButton"
+                >
+                    ← Previous
+                </button>
+
+                <button
+                    class="control-btn"
+                    id="nextButton"
+                >
+                    Next Step →
+                </button>
+
+                <button
+                    class="control-btn reset-btn"
+                    id="resetButton"
+                >
+                    ↻ Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Info -->
+
+        <section class="editor-info">
+
+            <div class="info-card">
+
+                <span>⚡</span>
+
+                <div>
+                    <h3>
+                        Step-by-Step
+                    </h3>
+
+                    <p>
+                        Execute your program one line at a time.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>📦</span>
+
+                <div>
+                    <h3>
+                        Track Variables
+                    </h3>
+
+                    <p>
+                        See variable values during execution.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🧠</span>
+
+                <div>
+                    <h3>
+                        Visualize Memory
+                    </h3>
+
+                    <p>
+                        Understand how data changes in memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
